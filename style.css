@@ -1,0 +1,503 @@
+@charset "UTF-8";
+/*GENERAL*/
+
+p,body, html{
+  padding: 0px;
+  margin: 0px;
+}
+h1, h2, h3, h4, h5, h6 p, small, li {
+  color: #505455;
+  list-style: none;
+}
+
+.traitJaune {
+  height: 3px;
+  background-color: #ffd745;
+  margin: 20px auto 30px;
+}
+.fas
+{
+  color: #ffd745;
+}
+/*Menu Burger - Partie Jaune */
+#menuToggle {
+  height: auto;
+  display: flex;
+  position: relative;
+}
+
+.barreBleu {
+  width: 400px;
+  height: 7px;
+  background-color: #ffd745;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+#navigation {
+  height: 50px;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+  text-align: center;
+  transition: color 0.3s ease;
+  color: white;
+}
+
+a:hover {
+  color: tomato;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 30px;
+  right: -50px;
+  z-index: 1;
+  
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffd745;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background-color: #505455;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: auto;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ffd745;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li a {
+  padding: 10px 0;
+  font-size: 22px;
+  color: white;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+  height: auto;
+  clear: both;
+}
+
+/*Partie Jaune*/
+section .yellow {
+  background: #ffd745;
+  height: auto;
+  padding: 0;
+}
+
+.monProfil img {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding: 40px;
+}
+
+.titleGrey h4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #505455;
+  color: #ffd745;
+  padding: 10px;
+}
+
+.yellow ul {
+  padding: 30px;
+}
+
+.yellow ul li {
+  margin: 30px;
+}
+
+.yellow p {
+  width: 65%;
+  text-align: justify;
+  margin: auto;
+  padding: 30px 0 400px;
+  line-height: 24px;
+}
+
+.aboutMe p {
+  color: #505455;
+}
+
+.imgLoisirs img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+}
+
+/*La partie blanche*/
+/*Début d'en-tête*/
+.blockDePresentation {
+  padding: 45px;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.blockFormations .exp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blockDePresentation .moussaJaune {
+  color: #ffd745;
+}
+
+.blockDePresentation p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.blockDePresentation .littleYellow {
+  width: 80px;
+  height: 2px;
+  background-color: #ffd745;
+}
+
+.myLastFirst h1 {
+  margin: 0;
+}
+
+/*Fin d'en-tête*/
+/*Début de block formation*/
+.blockFormationsExperience {
+  margin: 30px;
+}
+
+.blockFormationsExperience .ecole ul {
+  padding: 0;
+}
+
+/*Fin de block formation*/
+/*Début de block Expérience*/
+.blockFormationsExperience .exp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blockFormationsExperience ul {
+  padding: 0;
+}
+
+.experienceDeux .blockPeugeot {
+  padding-right: 44px;
+}
+
+.experienceTrois .blockCdiscount {
+  padding-right: 40px;
+}
+
+/*Fin de block Expérience*/
+/*Début de recommandation*/
+.recommandations .blockRecommandation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.recommandations h3 {
+  padding-left: 30px;
+}
+
+.recommandations .traitJaune {
+  height: 3px;
+  background-color: #ffd745;
+  margin-left: 30px;
+}
+
+/*Fin de recommandation*/
+/*Media Queries*/
+@media (min-width: 992px) {
+  .deuxiemeMenu {
+    display: none;
+  }
+
+  .experienceDeux .ecole {
+    padding-right: 40px;
+  }
+
+  .ecoleUn {
+    padding-right: 48px;
+  }
+
+  .recommandations .blockRecommandation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 992px) {
+  .iconGeneral {
+    width: 6%;
+  }
+
+  .withoutBurger {
+    display: none;
+  }
+
+  .myLastFirst {
+    text-align: center;
+  }
+
+  .littleYellow {
+    margin: auto;
+  }
+
+  .blockFormationsExperience h3 {
+    text-align: center;
+  }
+
+  #menu {
+    padding: 0;
+  }
+
+  .experienceDeux .blockPeugeot,
+.blockFormationsExperience,
+.experienceDeux .blockPeugeot,
+.experienceTrois .blockCdiscount, .blockapple {
+    text-align: right;
+    padding-right: 0px;
+  }
+
+  .recommandations h3 {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .recommandations .traitJaune {
+    margin-right: 0px;
+  }
+
+  .recommandations .blockRecommandation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 520px) {
+  .withoutBurger {
+    display: none;
+  }
+
+  #menu {
+    padding: 100px 0;
+  }
+
+  .contactMe ul {
+    display: block;
+    text-align: justify;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .yellow p {
+    width: 85%;
+    text-align: justify;
+    margin: auto;
+    padding: 30px 0 200px;
+  }
+
+  .black {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .myLastFirst {
+    text-align: center;
+  }
+
+  .littleYellow {
+    margin: auto;
+  }
+
+  .blockDePresentation {
+    display: flex;
+    align-items: center;
+  }
+
+  .blockFormationsExperience h3 {
+    text-align: center;
+  }
+
+  .blockFormationsExperience {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+  }
+
+  .iconGeneral {
+    width: 10%;
+    margin-bottom: 8px;
+  }
+
+  .iconGeneral {
+    width: 8%;
+  }
+
+  small {
+    display: inline-block;
+    flex-direction: column;
+    text-align: left;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .experienceDeux .ecole {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .ecole {
+    padding-left: 40px;
+  }
+
+  .ecoleUn {
+    padding-right: 0px;
+  }
+
+  .experienceDeux .blockPeugeot, .blockFormationsExperience,
+.experienceDeux .blockPeugeot,
+.experienceTrois .blockCdiscount, .blockapple {
+    display: inline-block;
+    flex-direction: column;
+    text-align: right;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .recommandations h3 {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .recommandations .traitJaune {
+    margin-left: 0px;
+  }
+
+  .blockRecommandation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 320px) {
+  #menu {
+    width: auto;
+    text-align: center;
+  }
+
+  aside .yellow {
+    background: #ffd745;
+    height: auto;
+    padding: 0;
+    display: flex;
+  }
+
+  .monProfil img {
+    width: 60%;
+    padding: 13px;
+  }
+
+  .contactMe ul li {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .imgLoisirs img {
+    width: 70%;
+    margin: auto;
+    padding: 5px;
+  }
+}
+@media (max-width: 320px) {
+  .blockDePresentation p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .contactMe ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactMe ul li {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+
+  .imgLoisirs img {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
