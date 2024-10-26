@@ -10,7 +10,7 @@ Je suis un intégrateur web avec une expertise en HTML, CSS. Grâce à mes comp�
 
 ### [CV YELLOW](https://mahmoud974.github.io/CV-YELLOW/)
 Un projet personnel où j'ai conçu mon CV en utilisant HTML et CSS. Ce projet illustre mes compétences en intégration et mon attention aux détails. 📄  
-![CV d'intégrateur web](url_de_l_image)
+![CV d'intégrateur web](images/cv.png)
 
 
 
